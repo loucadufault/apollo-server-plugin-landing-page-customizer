@@ -1,0 +1,50 @@
+{
+  "name": "apollo-server-plugin-landing-page-customizer",
+  "version": "0.0.1",
+  "description": "Wraps the @apollo/server ApolloServerPluginLandingPage* plugins to enable further customization, e.g. setting the title and favicon in the rendered HTML",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/wrapper.mjs",
+  "esnext": "dist/esm/wrapper.mjs",
+  "keywords": [
+    "graphql",
+    "apollo",
+    "plugin",
+    "landing",
+    "page",
+    "ApolloServerPluginLandingPageLocalDefault",
+    "ApolloServerPluginLandingPageProductionDefault"
+  ],
+  "author": "Louca Dufault",
+  "license": "ISC",
+  "files": [
+    "package.json",
+    "LICENSE",
+    "README.md",
+    "src/",
+    "dist/"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "build": "mkdir -p dist/cjs && cp -r public/esm dist/ && tsc -p tsconfig.build.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "@apollo/server": "^4.0.0"
+  },
+  "dependencies": {
+    "node-html-parser": "^6.1.13"
+  },
+  "devDependencies": {
+    "@apollo/server": "^4.10.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5"
+  }
+}
