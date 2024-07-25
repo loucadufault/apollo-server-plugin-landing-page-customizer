@@ -11,9 +11,9 @@ import type {
 } from './types'
 
 export function ApolloServerPluginLandingPageLocalDefaultCustomizable(
-  options: ApolloServerPluginLandingPageLocalDefaultCustomizableOptions,
+  options?: ApolloServerPluginLandingPageLocalDefaultCustomizableOptions,
 ): ApolloServerPlugin {
-  const { html, ...rest } = options
+  const { html, ...rest } = options ?? {}
   return ApolloServerPluginLandingPageDefaultCustomizable(
     ApolloServerPluginLandingPageLocalDefault(rest),
     { html },
@@ -21,9 +21,9 @@ export function ApolloServerPluginLandingPageLocalDefaultCustomizable(
 }
 
 export function ApolloServerPluginLandingPageProductionDefaultCustomizable(
-  options: ApolloServerPluginLandingPageProductionDefaultCustomizableOptions,
+  options?: ApolloServerPluginLandingPageProductionDefaultCustomizableOptions,
 ): ApolloServerPlugin {
-  const { html, ...rest } = options
+  const { html, ...rest } = options ?? {}
   return ApolloServerPluginLandingPageDefaultCustomizable(
     ApolloServerPluginLandingPageProductionDefault(rest),
     { html },

@@ -1,6 +1,6 @@
 {
   "name": "apollo-server-plugin-landing-page-customizer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Wraps the @apollo/server ApolloServerPluginLandingPage* plugins to enable further customization, e.g. setting the title and favicon in the rendered HTML",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/wrapper.mjs",
